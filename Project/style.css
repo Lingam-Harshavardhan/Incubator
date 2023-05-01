@@ -426,6 +426,30 @@
 }
 .drop-container.mobile-view .drop:hover {
   border-radius: 50%; /* Optional: add hover effect for larger screens */
+
+}
+@media screen and (max-width: 425px){
+  /* Startup Ecosystem */
+  .drop-container .drop .drop-content{
+    padding:0;
+  }
+  .drop-container.mobile-view .drop {
+    width:340px;
+    height:min-content; 
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .drop-container .drop::before{
+    content: "";
+    width:0;
+    height: 0;
+  }
+  .drop-container .drop::after{
+    content: "";
+    width:0;
+    height: 0;
+  }
+   /* End of Startup Ecosystem */
 }
 /* End of Startup Ecosystem */
 
@@ -686,28 +710,6 @@ footer .container .row{
      }
     /* End of Header  */
 
-    /* Startup Ecosystem */
-    .drop-container .drop .drop-content{
-      padding:0;
-    }
-    .drop-container.mobile-view .drop {
-      width:340px;
-      height:min-content; 
-      box-shadow: none;
-      border-radius: 0;
-    }
-    .drop-container .drop::before{
-      content: "";
-      width:0;
-      height: 0;
-    }
-    .drop-container .drop::after{
-      content: "";
-      width:0;
-      height: 0;
-    }
-     /* End of Startup Ecosystem */
-
      /* Events */
      .smallEventContainer{
       display: contents;
@@ -721,6 +723,7 @@ footer .container .row{
       flex-direction: column;
     }
 }
+
   
 /* Styles for screen widths between 400px and 480px */
 @media screen and (min-width: 400px) and (max-width: 480px) {
@@ -733,6 +736,19 @@ footer .container .row{
     border-radius: 0;
   }
    /* End of Header  */
+   
+   .drop-container .drop:nth-child(1),.drop-container .drop:nth-child(4),.drop-container .drop:nth-child(7),.drop-container .drop:nth-child(10){
+    border-radius: 56% 44% 58% 42% / 45% 67% 33% 55%  ; 
+   }
+   .drop-container .drop:nth-child(2),.drop-container .drop:nth-child(5),.drop-container .drop:nth-child(8){
+    border-radius: 53% 47% 58% 42% / 38% 58% 42% 62% ; 
+   }
+   .drop-container .drop:nth-child(3),.drop-container .drop:nth-child(6),.drop-container .drop:nth-child(9){
+    border-radius: 55% 45% 58% 42% / 41% 59% 41% 59%   ; 
+   }
+   .drop-container .drop:hover{
+     border-radius: 50%;
+   }
 
     /* Events */
     .smallEventContainer{
@@ -744,12 +760,26 @@ footer .container .row{
     /* End of Events */
 }
 /* Styles for screen widths between 480px and 560px */
-@media screen and (min-width: 480px) and (max-width: 560px) {
+@media screen and (min-width: 481px) and (max-width: 560px) {
     /* Header  */
     #header .navlist ul a{
      font-size: 2.4rem;
     }
     /* End of Header  */
+    /* Startup Ecosystem */
+
+    .drop-container .drop:nth-child(1),.drop-container .drop:nth-child(4),.drop-container .drop:nth-child(7),.drop-container .drop:nth-child(10){
+      border-radius: 56% 44% 58% 42% / 45% 67% 33% 55%  ; 
+     }
+     .drop-container .drop:nth-child(2),.drop-container .drop:nth-child(5),.drop-container .drop:nth-child(8){
+      border-radius: 53% 47% 58% 42% / 38% 58% 42% 62% ; 
+     }
+     .drop-container .drop:nth-child(3),.drop-container .drop:nth-child(6),.drop-container .drop:nth-child(9){
+      border-radius: 55% 45% 58% 42% / 41% 59% 41% 59%   ; 
+     }
+     .drop-container .drop:hover{
+       border-radius: 50%;
+     }
 
     /* Events */
     .eventContainer {
